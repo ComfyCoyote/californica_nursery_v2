@@ -1,0 +1,36 @@
+@keyframes scroll {
+    from { transform: translateX(100%) }
+    to { transform: translateX(-100%) }
+}
+
+.container {
+    height: 100px;
+}
+
+.text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: scroll 15s linear infinite;
+}
+
+@media (min-width: 768px) {
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+.lime {
+    background-color: #b3e6b3;
+}
+
+.darkBrown {
+    background-color: #331a00;
+}
+
+.olive {
+    background-color: #808000;
+}

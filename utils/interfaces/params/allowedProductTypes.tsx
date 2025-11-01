@@ -1,0 +1,1 @@
+export type AllowedProductTypes = 'PLANT' | 'SEED' | 'MERCH'

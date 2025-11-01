@@ -1,16 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@theme {
+  --color-*: initial;
+  --color-black: black;
+  --color-white: white;
+  --color-background: #ffffff;
+  --color-foreground: #f1e3cf;
+  --color-cream: #f1e3cf;
+  --color-olive: #605925;
+  --color-darkBrown: #301c10;
+  --color-charcoal: #231f20;
+  --color-rust: #8b3615;
+  --color-pink: #d272ad;
+  --color-lightYellow: #f2ef8a;
+  --color-lime: #c0d84d;
+  --color-cyan: #91d7ee;
+  --color-orange: #f36e21;
+  --color-darkGreen: #443e18;
+  --color-purple: #ff99cc;
+  --color-orange-natural: #fdba74;
+  --color-orange-natural-hover: #c2410c;
+  --color-yellow-natural: #fef08a;
+  --color-yellow-natural-hover: #ca8a04;
+  --color-green-hover: #15803d;
+  --color-blue-hover: #1d4ed8;
+  --color-purple-hover: #6b21a8;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-gray-50: #f9fafb;
+  --color-gray-200: #e5e7eb;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+
+  --animate-scrollText: scrollText 3s linear infinite;
+
+  --animate-scrollText-slow: scrollText 7s linear infinite;
+
+  @keyframes scrollText {
+      from { transform: translateX(100%) }
+      to { transform: translateX(-100%) }
+  }
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,3 +60,5 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
