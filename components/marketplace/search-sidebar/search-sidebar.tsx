@@ -16,8 +16,8 @@ const SearchSidebar: React.FC<SearchSidebarPropTypes> = ({ type }) => {
   
 
   return (
-    <div className={`fixed right-0 top-0 w-[320px] h-full bg-darkBrown transition-all duration-300 ${open ? 'translate-x-0' : 'translate-x-full'} z-50`}>
-      <div className="flex justify-end p-4">
+    <div className={`fixed right-0 top-0 w-full md:w-[320px] md:h-full h-[100vh] bg-darkBrown transition-all duration-300 ${open ? 'translate-x-0' : 'translate-x-full'} z-50`}>
+      <div className="flex justify-end p-13 md:p-4">
         <button 
           onClick={toggleOpen} 
           className="text-cream hover:text-lime"
@@ -25,7 +25,7 @@ const SearchSidebar: React.FC<SearchSidebarPropTypes> = ({ type }) => {
           ✕
         </button>
       </div>
-      <div className="p-4">
+      <div className="md:p-4">
         <div className="bg-olive rounded-lg">
           <div className="border-b border-cream/20">
             <div className="flex space-x-2 p-3">

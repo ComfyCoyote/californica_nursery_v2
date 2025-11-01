@@ -19,7 +19,7 @@ const NavDropdownMobile: React.FC<NavbarDropdownProps> = ({isOpen, setIsOpen }) 
   ]
 
   return (
-    <div className="w-full">
+    <div>
       <div className="flex justify-center">
         <button
           onClick={() => setIsOpen()}
@@ -30,7 +30,8 @@ const NavDropdownMobile: React.FC<NavbarDropdownProps> = ({isOpen, setIsOpen }) 
       </div>
       
       {isOpen && (
-        <div className="w-[200px] mt-18 bg-white absolute top-[100px] z-1000">
+        <div className="fixed inset-0 z-50 flex items-center justify-center transition-opacity" onClick={() => setIsOpen()}>
+        <div className="w-[200px] mt-18 bg-white absolute top-[100px] right-[90px] z-1000">
             <div className="w-full flex flex-col space-y-0">
               {options.map((option) => (
                 <Link
@@ -46,6 +47,7 @@ const NavDropdownMobile: React.FC<NavbarDropdownProps> = ({isOpen, setIsOpen }) 
                 </Link>
               ))}
             </div>
+        </div>
         </div>
       )}
     </div>

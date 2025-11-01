@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
   const {open, toggleOpen} = useSearch()
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-darkGreen px-1 py-2 flex items-center justify-between flex-col">
+    <div className="fixed top-0 left-0 w-[100vw] z-50 bg-darkGreen px-1 py-2 flex items-center justify-between flex-col">
       <div className="p-5 text-center">
         <Link href="/">
           <Image
@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
           />
         </Link>
       </div>      
-      <div className="flex flex-row w-full items-center px-4 gap-8">
+      <div className="flex flex-row w-full items-center  justify-between px-4 gap-8">
         <ShoppingCart />
         <SearchSidebar type={pathname}/>
         <div className="text-center">

@@ -23,7 +23,7 @@ const AttributeSearchPanel: React.FC = () => {
     const options = generateOptions()
     
     return (
-        <div className="space-y-3">
+        <div className="h-[calc(100vh-300px)] p-5 overflow-auto space-y-3">
             {attributeNames.map(([name, keyName]) => (
                 <div key={keyName}>
                     <p className="font-semibold text-cream">

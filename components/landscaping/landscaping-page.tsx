@@ -8,7 +8,7 @@ const LandscapingPage = () => {
     return (
         <div className="w-full bg-cream overflow-x-hidden">
             <Navbar/>
-            <div className="w-full mt-[100px]">
+            <div className="w-full md:mt-[100px] mt-[160px]">
             <LandscapingSectionOne />
             <LandscapingSectionTwo />
             <LandscapingSectionThree />

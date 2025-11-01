@@ -42,13 +42,12 @@ const LandingPage: React.FC = () => {
         <React.Fragment>
             <div className="min-h-screen bg-olive">
                 <div className="bg-darkGreen flex items-center justify-center px-5">
-                    <div className="p-5">
+                    <div className="p-5 w-[600px] h-[100px]">
                         <Image 
                             src="/images/titles/wordmark_web.png" 
                             alt="Logo" 
                             width={600} 
                             height={100}
-                            className="w-[600px] h-[100px]"
                         />
                     </div>
                     <div className="hidden md:block absolute right-10">

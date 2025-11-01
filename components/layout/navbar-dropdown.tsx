@@ -21,7 +21,8 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ options, placeholder, i
       </button>
 
       {isOpen && (
-        <div className="w-[200px] mt-2 bg-white absolute top-[100px] z-1000">
+        <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={() => setIsOpen()}>
+        <div className="w-[200px] mt-2 bg-white absolute right-[300px] top-[100px] z-50">
             <div className="w-full flex flex-col space-y-0">
               {options.map((option) => (
                 <Link
@@ -37,6 +38,7 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ options, placeholder, i
                 </Link>
               ))}
             </div>
+        </div>
         </div>
       )}
     </div>

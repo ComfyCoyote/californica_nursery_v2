@@ -15,8 +15,8 @@ const ProductDetailImages: React.FC<ProductDetailInfoPropTypes> = ({ item }) => 
     const [mainImage, setMainImage] = useState(0);
 
     return (
-        <div className="flex flex-col items-start h-full w-full md:w-3/5 gap-4">
-            <div className="relative h-[75vh] w-[60vh]">
+        <div className="flex flex-col md:pt-0 pt-20 items-start h-full w-full md:w-3/5 gap-4">
+            <div className="relative h-[50vh] w-[40vh] justify-center md:h-[75vh] md:w-[60vh]">
                 <Image 
                     placeholder='blur'
                     blurDataURL={getImageSrc()}
@@ -35,7 +35,7 @@ const ProductDetailImages: React.FC<ProductDetailInfoPropTypes> = ({ item }) => 
                         return (
                             <div 
                                 key={img}
-                                className="relative cursor-pointer w-[5vw] h-[10vh]"
+                                className="relative cursor-pointer md:w-[5vw] h-[13vh] w-[37vw]"
                                 onClick={() => selectImage(index)}
                             >
                                 <Image 

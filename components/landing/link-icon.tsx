@@ -14,6 +14,7 @@ const LinkIcon: React.FC<LinkIconPropTypes> = ({ iconName, color }) => {
     console.log(color)
     return (
         <div className="flex flex-col items-center">
+            <div className="w-[350px] h-[350px]">
             <Link href={`/${iconName}`}>
                 <Image
                     onMouseEnter={() => setHover(true)}
@@ -23,9 +24,9 @@ const LinkIcon: React.FC<LinkIconPropTypes> = ({ iconName, color }) => {
                     alt="Icon"
                     width={350}
                     height={350}
-                    className="w-[350px] h-[350px]"
                 />
             </Link>
+            </div>
             <Link href={`/${iconName}`}>
                 <button
                    style={{ backgroundColor: color }}
