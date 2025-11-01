@@ -4,9 +4,9 @@ export const bio = 'Californica Nursery began in 2020 by two longtime friends wi
 
 const AboutPageTopSection = () => {
     return (
-        <div className="bg-cream">
-            <div className="bg-lime h-[55px] pt-2 flex items-center justify-center">
-                <h2 className="text-3xl font-bold text-black">
+        <div className="bg-cream md:mt-[0px] mt-[21px]">
+            <div className="bg-lime md:h-[55px] h-[120px] pt-2 flex items-center justify-center">
+                <h2 className="md:text-3xl text-center text-2xl font-bold text-black">
                     CALIFORNIA NATIVE PLANTS, GROWN BY CALIFORNIA LOCALS
                 </h2>
             </div>

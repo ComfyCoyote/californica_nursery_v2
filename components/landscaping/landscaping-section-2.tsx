@@ -46,7 +46,7 @@ const LandscapingSectionTwo = () => {
                             {text1}
                         </p>
                     </div>
-                    <div className="pl-5 md:pl-10 flex flex-col gap-10">
+                    <div className="pl-5 md:pl-10 flex justify-center text-center flex-col gap-10">
                         {wpArr.map((wp) => (
                             <p key={wp} className="text-2xl text-cream font-bold">
                                 {wp}
