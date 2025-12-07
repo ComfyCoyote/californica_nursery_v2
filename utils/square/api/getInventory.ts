@@ -1,12 +1,8 @@
 import client from "./client";
 import { Square } from "square";
-import { productConstructor } from "../constructors/productConstructor";
-import { type } from "os";
 
 
-
-
-export async function getInventory(catalogObjectIds: string[]){
+export default async function getInventory(catalogObjectIds: string[]){
     
     try {
 

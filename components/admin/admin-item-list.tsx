@@ -13,7 +13,7 @@ interface ItemListProps {
 const AdminItemList: React.FC<ItemListProps> = ({ items }) => {
 
     const [openModal, setOpenModal] = useState(false);
-    const [item, setItem] = useState<AdminItem>({id: "", name: "", images: [], imageUrls: []});
+    const [item, setItem] = useState<AdminItem>({id: "", name: "", images: [], squareImageUrls: [], imageUrls: []});
 
     const selectItem = (item: AdminItem) => {
         setItem(item);

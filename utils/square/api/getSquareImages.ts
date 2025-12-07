@@ -7,7 +7,7 @@ import { Square } from "square";
 
 
 
-export async function getSquareImages(){
+export default async function getSquareImages(){
 
 
     try {

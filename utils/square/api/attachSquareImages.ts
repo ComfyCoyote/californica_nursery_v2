@@ -3,7 +3,7 @@ import { Square } from "square"
 
 
 
-export async function attachSquareImages(squareImages: Square.CatalogObjectImage[], products: AdminItem[]){
+export default async function attachSquareImages(squareImages: Square.CatalogObjectImage[], products: AdminItem[]){
 
     products.forEach((product) => {
         const imageIds = product.images
