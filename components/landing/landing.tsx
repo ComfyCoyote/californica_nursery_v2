@@ -41,7 +41,7 @@ const LandingPage: React.FC = () => {
     return (
         <React.Fragment>
             <div className="min-h-screen bg-olive">
-                <div className="bg-darkGreen flex items-center justify-center px-5">
+                <div className="h-[200px] bg-darkGreen flex items-center justify-center px-5">
                     <div className="p-5 w-[600px] h-[100px]">
                         <Image 
                             src="/images/titles/wordmark_web.png" 

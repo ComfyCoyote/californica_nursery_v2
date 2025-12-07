@@ -14,6 +14,7 @@ interface AdminItemEditProps {
 }
 
 const AdminItemEdit: React.FC<AdminItemEditProps> = ({ item, open, onClose }) => {
+  console.log(item)
   const [loading, setLoading] = useState(false);
 
   const updateItem = async (item: AdminItem) => {
@@ -89,7 +90,7 @@ const AdminItemEdit: React.FC<AdminItemEditProps> = ({ item, open, onClose }) =>
             <div>
               <h4 className="font-semibold text-lg mb-3 text-black">Square Images</h4>
               <div className="flex flex-wrap gap-3">
-                {item.imageUrls.map((url) => (
+                {item.squareImageUrls.map((url) => (
                   <div key={url} className="relative h-[300px] w-[150px] overflow-hidden rounded">
                     <Image 
                       src={url} 

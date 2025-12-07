@@ -9,6 +9,7 @@ interface SearchContextProps {
     textQuery: string
     search: (searchBy: string) => void
     appWideSearch: any
+    attributesQuery: AttributesQuery
     selectAttributeQuery: (attribute: string, value: any[]) => void
     selectTextQuery: (input: string) => void
     searchByOptions: string[]
@@ -28,6 +29,7 @@ const SearchContext = createContext<SearchContextProps>({
     textQuery: '',
     search: (searchBy: string) => {},
     appWideSearch: {},
+    attributesQuery: {},
     selectAttributeQuery: () => {},
     selectTextQuery: () => {},
     searchByOptions: ['name', 'attributes']
@@ -84,7 +86,7 @@ export const SearchProvider: React.FC<SearchProviderProps> = (props) => {
   }
 
   return (
-    <SearchContext.Provider value={{ open, search, appWideSearch, textQuery, toggleOpen, selectAttributeQuery, selectTextQuery, searchByOptions}}>
+    <SearchContext.Provider value={{ open, search, appWideSearch, textQuery, toggleOpen, attributesQuery, selectAttributeQuery, selectTextQuery, searchByOptions}}>
       {props.children}
     </SearchContext.Provider>
   );

@@ -20,6 +20,8 @@ const Navbar: React.FC = () => {
   const isMobile = useMediaQuery({query: "(max-width: 768px)"});
 
   const { toggleCart } = useCart();
+  const {attributesQuery} = useSearch()
+  console.log('attributesQuery', attributesQuery)
   const pathname = usePathname();
 
   const {open, toggleOpen} = useSearch()
@@ -83,10 +85,32 @@ const Navbar: React.FC = () => {
           ["/plants", "/seeds", "/merch"].includes(pathname) &&
           <div className="text-center mt-2 md:mt-0">
             <button
-              onClick={toggleOpen}
-              className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] bg-darkGreen text-white hover:bg-transparent"
-            >
-              <FaSearch className="text-lime text-3xl" />
+                onClick={toggleOpen}
+                className="
+                  relative
+                  h-[50px] md:h-[70px]
+                  w-[50px] md:w-[70px]
+                  bg-darkGreen text-white
+                  hover:bg-transparent
+                  flex items-center justify-center
+                "
+              >
+                <FaSearch className="text-lime text-3xl" />
+
+                {
+                  Object.keys(attributesQuery)?.length > 0 &&
+                   <span
+                  className="
+                    absolute top-0 right-0
+                    bg-red-600 text-white text-md font-bold
+                    w-6 h-6 flex items-center justify-center
+                    rounded-full
+                  "
+                >
+                  {Object.keys(attributesQuery)?.length}
+                </span>
+                }
+               
             </button>
           </div>
         }

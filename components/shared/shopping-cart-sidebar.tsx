@@ -44,7 +44,7 @@ const ShoppingCart: React.FC = () => {
         <Link href={`/checkout?redirect=/plants`}>
           <button 
             disabled={orderItems.length === 0}
-            className="w-[360px] md:w-full cursor-pointer bg-lime text-black py-2 px-4 rounded-lg text-sm hover:bg-lime/90 disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="w-[360px] md:w-full cursor-pointer bg-lime text-black py-2 px-4 rounded-lg text-sm hover:bg-lime/90 disabled:cursor-not-allowed"
             onClick={checkoutClicked}
           >
             Checkout

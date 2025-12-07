@@ -3,4 +3,5 @@ export interface AdminItem {
     name: string;
     images: string[];
     imageUrls: string[];
+    squareImageUrls: string[]
 }
