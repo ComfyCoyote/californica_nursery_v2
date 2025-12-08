@@ -1,5 +1,5 @@
 import ProductDetailView from "@/components/marketplace/detail/product-detail-view";
-import { getProducts } from "@/utils/square/api/getProducts";
+import getProducts from "@/utils/square/api/getProducts";
 
 export default async function Page({params}: {params: Promise<{ slug: string }>}) {
     const { slug } = await params
