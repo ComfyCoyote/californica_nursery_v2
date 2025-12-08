@@ -7,10 +7,10 @@ import { Square } from "square"
 
 export default async function Page(){
     const merch = await getProducts('MERCH')
-    const inventoryPrices = merch?.map((item) => item.price)
-    const inventoryIds = merch?.map((item) => item.id)
-    const inventory = await getInventory(inventoryIds as string[])
-    const updatedInventory = inventoryUpdater(inventory as Square.InventoryCount[], merch as Plant[])
+    //const inventoryPrices = merch?.map((item) => item.price)
+    //const inventoryIds = merch?.map((item) => item.id)
+    //const inventory = await getInventory(inventoryIds as string[])
+    //const updatedInventory = inventoryUpdater(inventory as Square.InventoryCount[], merch as Plant[])
     
     return (
         <Marketplace title="merch" pageColor="pink" items={merch}/>
