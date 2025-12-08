@@ -1,7 +1,7 @@
 import Marketplace from "@/components/marketplace/marketplace"
-import { getProducts } from "@/utils/square/api/getProducts"
-import { getInventory } from "@/utils/square/api/getInventory"
-import { inventoryUpdater } from "@/utils/square/constructors/inventoryUpdater"
+import getProducts from "@/utils/square/api/getProducts"
+import getInventory from "@/utils/square/api/getInventory"
+import inventoryUpdater from "@/utils/square/constructors/inventoryUpdater"
 import { Plant } from "@/utils/interfaces/product/plant"
 import { Square } from "square"
 

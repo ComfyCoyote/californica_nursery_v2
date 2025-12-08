@@ -6,7 +6,7 @@ import { PriceVariation } from "@/utils/interfaces/product/priceVariation"
 import { getPriceRangeText } from "@/utils/helpers/priceRangeText"
 
 
-export function inventoryUpdater(inventoryAmounts: Square.InventoryCount[], items: Plant[] | Seed[] | Merch[]){
+export default function inventoryUpdater(inventoryAmounts: Square.InventoryCount[], items: Plant[] | Seed[] | Merch[]){
     items.map((item: Plant | Seed | Merch) => {
         const itemPrices = item.price
         const inventoryAdjustedPrices: PriceVariation[] = []
