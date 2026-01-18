@@ -1,10 +1,8 @@
-import type { NextConfig } from "next";
-
- //[new URL('https://d4ixhj8jfp690.cloudfront.net/**'), new URL('https://items-images-production.s3.us-west-2.amazonaws.com/**')], // allow external image domains
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+ const nextConfig = {
   images: {
-    qualities: [60, 75],
+    deviceSizes: [640, 750, 1080, 1920],
+    imageSizes: [16, 32, 64, 128],
     remotePatterns:  [
      {
         protocol: 'https',
