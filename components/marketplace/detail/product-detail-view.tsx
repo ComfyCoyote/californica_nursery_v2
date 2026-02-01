@@ -13,6 +13,7 @@ import ProductDetailInfo from './product-detail-info';
 import ProductDetailImages from './product-detail-images';
 import ProductDetailPrices from './product-detail-prices';
 import Navbar from '@/components/layout/navbar';
+import AddToCartToastButton from './add-to-cart-toast-button';
 
 interface ProductCardPropTypes {
     item: Plant | Merch | Seed;
@@ -58,17 +59,9 @@ const ProductDetailView: React.FC<ProductCardPropTypes> = ({ item, type, pageCol
             <Navbar />
             <div 
                 className="bg-cream mt-[90px] px-[25px]"
-                style={{
-                    height: '100%',
-                    width: '100%'
-                }}
             >
                 <div 
-                    className="mt-[20px] p-[10px] md:p-[50px] h-full w-full space-y-[5px] md:space-y-[20px] flex flex-col md:flex-row"
-                    style={{
-                        height: '100%',
-                        width: '100%'
-                    }}
+                    className="mt-[20px] p-[10px] gap-[30px] md:p-[50px] h-full w-full space-y-[5px] md:space-y-[20px] flex flex-col md:flex-row"
                 >
                     <ProductDetailImages item={item} />
                     <div 
@@ -84,20 +77,11 @@ const ProductDetailView: React.FC<ProductCardPropTypes> = ({ item, type, pageCol
                                 priceVariation={priceVariation}
                             />
                         )}
-                        <button
-                            onClick={(event) => handleAddToCartClick(event)}
-                            disabled={setDisabled()}
-                            className={`
-                                px-6 py-3 text-lg
-                                text-black
-                                ${pageColor}
-                                rounded-none
-                                border-2 border-black
-                                disabled:opacity-50 disabled:cursor-not-allowed
-                            `}
-                        >
-                            add to cart!
-                        </button>
+                        <AddToCartToastButton 
+                            handleAddToCartClick={handleAddToCartClick}
+                            setDisabled={setDisabled}
+                            pageColor={pageColor}
+                        />
                     </div>
                 </div>
             </div>

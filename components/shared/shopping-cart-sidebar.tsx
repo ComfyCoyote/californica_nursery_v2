@@ -14,7 +14,7 @@ const ShoppingCart: React.FC = () => {
         <h2 className="text-cream text-xl">Shopping Cart</h2>
         <button 
           onClick={toggleCart} 
-          className="w-[360px] md:w-[320px] text-cream hover:text-lime"
+          className="w-[20px] md:w-[20px] text-cream hover:text-lime"
         >
           ✕
         </button>
@@ -25,13 +25,13 @@ const ShoppingCart: React.FC = () => {
           <p className="text-cream">No items in the cart</p>
         ) : (
           orderItems.map((item) => (
-            <div key={item.id} className="flex md:w-[320px] w-[360px] justify-between items-center mb-4">
+            <div key={item.id} className="flex md:w-[300px] w-[360px] justify-between items-center mb-4">
               <div>
                 <p className="text-cream">{item.name}</p>
               </div>
               <button 
                 onClick={(e) => removeFromCart(e, item.catalogObjectId)}
-                className="px-4 py-2 border border-red-500 text-red-500 rounded hover:bg-red-500 hover:text-cream text-sm"
+                className="px-4 py-2 border-darkBrown text-darkBrown rounded hover:text-cream hover:border-cream text-sm"
               >
                 Remove
               </button>
