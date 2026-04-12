@@ -16,7 +16,7 @@ const AboutPageTopSection = () => {
                         {bio}
                     </p>
                 </div>
-                <div className="flex-1 relative h-[800px] w-[400px]">
+                <div className="flex-1 relative h-[1000px] w-[400px]">
                     <Image
                         priority
                         src='/images/about/jackson_ian_2.webp'

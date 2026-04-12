@@ -17,10 +17,10 @@ const AboutPageIanSection = () => {
                 />
             </div>
             <div className="p-5 md:p-10 w-full md:w-auto flex flex-col items-center md:items-start text-center md:text-left border-t border-white/10 md:border-t-0">
-                <p className="text-2xl md:text-3xl font-bold text-white">
+                 <p className="text-2xl md:text-3xl text-white font-semibold">
                     IAN RHODES
                 </p>
-                <p className="text-base md:text-lg font-semibold">
+                <p className="text-base md:text-lg text-white font-semibold">
                     {iansBio}
                 </p>
                 <div className="flex items-center justify-center md:justify-start w-full md:w-auto">

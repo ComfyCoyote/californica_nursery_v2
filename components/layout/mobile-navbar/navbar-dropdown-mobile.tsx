@@ -16,6 +16,7 @@ const NavDropdownMobile: React.FC<NavbarDropdownProps> = ({isOpen, setIsOpen }) 
     { value: 'option3', label: 'MERCH', bgColor: 'pink', hoverColor: 'purple-hover', href: '/merch' },
     { value: 'option4', label: 'LANDSCAPING', bgColor: 'orange-natural', hoverColor: 'orange-natural-hover', href: '/landscaping' },
     { value: 'option5', label: 'ABOUT', bgColor: 'yellow-natural', hoverColor: 'yellow-natural-hover', href: '/about' },
+    { value: 'option6', label: 'CONTACT', bgColor: 'blue-natural', hoverColor: 'blue-natural-hover', href: '/contact' },
   ]
 
   return (

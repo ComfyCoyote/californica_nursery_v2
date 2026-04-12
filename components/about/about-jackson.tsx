@@ -6,10 +6,10 @@ const AboutPageJacksonSection = () => {
     return (
         <div className="bg-olive w-full flex flex-col md:flex-row items-center">
             <div className="p-5 md:p-10 w-full md:w-1/2 flex flex-col justify-between items-center md:items-start gap-4 text-center md:text-left">
-                <p className="text-2xl md:text-3xl font-semibold">
+                <p className="text-2xl md:text-3xl text-white font-semibold">
                     JACKSON DRISCOLL
                 </p>
-                <p className="text-base md:text-lg font-semibold">
+                <p className="text-base md:text-lg text-white font-semibold">
                     {jacksonsBio}
                 </p>
                 <div className="flex">

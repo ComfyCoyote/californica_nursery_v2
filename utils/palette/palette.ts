@@ -23,7 +23,9 @@ const palette: Palette = {
     "yellow-natural-hover": "#ca8a04",
     "green-hover": "#15803d",
     "blue-hover": "#1d4ed8",
-    "purple-hover": "#6b21a8"
+    "purple-hover": "#6b21a8",
+    "blue-natural": "#67e8f9",       // a soft cyan that bridges skyblue and the natural tones
+    "blue-natural-hover": "#0e7490",
 }
 
 
