@@ -47,8 +47,8 @@ const Marketplace: React.FC<MarketplacePropTypes> = ({ title, pageColor, items }
             <Navbar />
             <div className="bg-cream h-full w-full pt-[160px] md:pt-[105px]">
                 <div
-                    style={{ backgroundColor: palette[pageColor] }} 
-                    className={`overflow-hidden w-full h-[55px]`}>
+                    style={{ backgroundColor: palette[pageColor] }}
+                    className={`overflow-hidden w-full h-[55px] mt-5`}>
                     <div className={`text-black whitespace-nowrap inline-flex justify-between items-center w-[2000px] h-full`}>
                         {Array(6).fill(0).map((_, i) => (
                             <span 

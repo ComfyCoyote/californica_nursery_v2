@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
   const { toggleCart } = useCart();
   const {attributesQuery} = useSearch()
-  console.log('attributesQuery', attributesQuery)
+
   const pathname = usePathname();
 
   const {open, toggleOpen} = useSearch()
@@ -48,17 +48,17 @@ const Navbar: React.FC = () => {
       <div className="p-5 text-center md:text-left">
         <Link href="/">
           <Image
-            height={50}
-            width={200} 
-            src={'/images/titles/nav_bar.png'}
+            height={200}
+            width={400} 
+            src={'/images/landing/shop-page-lettering.png'}
             alt={'Californica Nursery Logo'}
-            className="w-[200px] h-[50px]"
+            className="w-[300px] h-[70px]"
           />
         </Link>
       </div>      
       <div className="flex flex-col md:flex-row w-full md:auto items-center justify-end gap-8">
-        <NavbarDropdown options={shopOptions} placeholder="Shop" isOpen={shopOpen} setIsOpen={() => {setExploreOpen(false); setShopOpen(!shopOpen)}}/>
-        <NavbarDropdown options={exploreOptions} placeholder="Explore" isOpen={exploreOpen} setIsOpen={() => {setShopOpen(false); setExploreOpen(!exploreOpen)}}/>
+        <NavbarDropdown options={shopOptions} placeholder="Shop"  xPosition="420px" yPosition="0px" isOpen={shopOpen} setIsOpen={() => {setExploreOpen(false); setShopOpen(!shopOpen)}}/>
+        <NavbarDropdown options={exploreOptions} placeholder="Explore" xPosition="300px" yPosition="0px" isOpen={exploreOpen} setIsOpen={() => {setShopOpen(false); setExploreOpen(!exploreOpen)}}/>
         <Link href={'/contact'}>
           <button className="bg-transparent text-white text-2xl hover:bg-transparent">
             <span className="text-cream">CONTACT</span>
