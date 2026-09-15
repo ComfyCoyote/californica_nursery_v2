@@ -1,9 +1,18 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
     <div className="bg-darkBrown py-4 px-10 w-full flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start">
-      <div className="flex flex-col items-center md:items-start space-y-2">
+      <div className="flex flex-row items-center md:items-start gap-6">
+        <Image
+          src="/images/landing/barbed-wire-logo-white.png"
+          alt="Californica Nursery Logo"
+          width={120}
+          height={120}
+          className="shrink-0"
+        />
+        <div className="flex flex-col items-center md:items-start space-y-2">
         <h2 className="text-lg md:text-3xl font-bold text-cream">
           Californica Nursery
         </h2>
@@ -16,6 +25,7 @@ const Footer: React.FC = () => {
         <p className="md:text-xl text-[10px] text-center text-cream">
           © {new Date().getFullYear()} Californica Nursery. All rights reserved.
         </p>
+        </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between mt-4 md:mt-0 space-y-4 md:space-y-0 md:space-x-10">
         <div className="flex flex-col items-center md:items-end space-y-2">
