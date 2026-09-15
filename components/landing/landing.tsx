@@ -63,16 +63,24 @@ const LandingPage: React.FC = () => {
                     </div>
                 ))}
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 h-[200px] bg-darkGreen/80 flex items-center justify-center px-5">
-                    <div className="p-5 w-[600px] h-[100px]">
+                <div className="relative z-10 h-[200px] bg-darkGreen flex items-center justify-between px-5">
+                <div className="p-5">
                         <Image
-                            src="/images/titles/wordmark_web.png"
+                            src="/images/landing/main-logo.png"
                             alt="Logo"
-                            width={600}
-                            height={100}
+                            width={180}
+                            height={180}
                         />
                     </div>
-                    <div className="hidden md:block absolute right-10">
+                    <div className="p-5 bg-blue w-[700px] h-[250px] mr-22">
+                        <Image
+                            src="/images/landing/landing-page-logo-white.png"
+                            alt="Logo"
+                            width={700}
+                            height={300}
+                        />
+                    </div>
+                    <div className="">
                         <Image
                             src="/images/icons/basket_lime.png"
                             alt="Shopping Cart"
