@@ -7,9 +7,11 @@ interface NavbarDropdownProps {
   placeholder?: string;
   isOpen: boolean;
   setIsOpen: () => void;
+  xPosition?: string;
+  yPosition?: string;
 }
 
-const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ options, placeholder, isOpen, setIsOpen }) => {
+const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ options, placeholder, isOpen, setIsOpen, xPosition }) => {
 
   return (
     <div>
@@ -22,7 +24,10 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ options, placeholder, i
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={() => setIsOpen()}>
-        <div className="w-[200px] mt-2 bg-white absolute right-[300px] top-[100px] z-50">
+        <div 
+          className={`w-[200px] mt-2 bg-white absolute top-[100px] z-50`}
+          style={{ right: `${xPosition}` }}
+        >
             <div className="w-full flex flex-col space-y-0">
               {options.map((option) => (
                 <Link
