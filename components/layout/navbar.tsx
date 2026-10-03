@@ -5,6 +5,7 @@ import React from "react";
 import Link from 'next/link';
 import { FaSearch } from 'react-icons/fa';
 import NavbarDropdown from './navbar-dropdown';
+import * as Menubar from '@radix-ui/react-menubar';
 import ShoppingCart from '../shared/shopping-cart-sidebar';
 import { useCart } from '@/contexts/cart-context';
 import { usePathname } from 'next/navigation';
@@ -14,8 +15,7 @@ import { useSearch } from '../marketplace/search-sidebar/search-sidebar-context'
 import NavbarMobile from './mobile-navbar/navbar-mobile';
 
 const Navbar: React.FC = () => {
-  const [shopOpen, setShopOpen] = React.useState(false);
-  const [exploreOpen, setExploreOpen] = React.useState(false);
+  const [openMenu, setOpenMenu] = React.useState('');
 
   const isMobile = useMediaQuery({query: "(max-width: 768px)"});
 
@@ -57,10 +57,12 @@ const Navbar: React.FC = () => {
         </Link>
       </div>      
       <div className="flex flex-col md:flex-row w-full md:auto items-center justify-end gap-8">
-        <NavbarDropdown options={shopOptions} placeholder="Shop"  xPosition="420px" yPosition="0px" isOpen={shopOpen} setIsOpen={() => {setExploreOpen(false); setShopOpen(!shopOpen)}}/>
-        <NavbarDropdown options={exploreOptions} placeholder="Explore" xPosition="300px" yPosition="0px" isOpen={exploreOpen} setIsOpen={() => {setShopOpen(false); setExploreOpen(!exploreOpen)}}/>
+        <Menubar.Root value={openMenu} onValueChange={setOpenMenu} className="flex items-center gap-8">
+          <NavbarDropdown value="shop" options={shopOptions} placeholder="Shop" />
+          <NavbarDropdown value="explore" options={exploreOptions} placeholder="Explore" />
+        </Menubar.Root>
         <Link href={'/contact'}>
-          <button className="bg-transparent text-white text-2xl hover:bg-transparent">
+          <button className="bg-transparent text-white text-2xl hover:bg-transparent cursor-pointer">
             <span className="text-cream">CONTACT</span>
           </button>
         </Link>
@@ -68,7 +70,7 @@ const Navbar: React.FC = () => {
         <SearchSidebar type={pathname}/>
         <div className="text-center">
           <button
-            className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] rounded-full bg-darkBrown text-white hover:bg-transparent" 
+            className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] rounded-full bg-darkBrown text-white hover:bg-transparent cursor-pointer" 
             onClick={toggleCart}
           >
             <Image

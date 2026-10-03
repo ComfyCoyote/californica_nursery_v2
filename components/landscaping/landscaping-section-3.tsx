@@ -30,7 +30,7 @@ const LandscapingSectionThree = () => {
                 </p>
             </div>
             <div className="w-full h-[650px] overflow-x-scroll border border-darkBrown bg-darkBrown rounded-b-none shadow-md">
-                <div className="flex gap-0">
+                <div className="flex gap-2">
                     {images.map((src, index) => (
                         <div 
                             key={src}

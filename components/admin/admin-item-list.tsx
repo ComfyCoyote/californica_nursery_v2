@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import AdminItemEdit from './admin-item-edit';
+import RedeployButton from './redeploy-button';
 import type { AdminItem } from '@/utils/interfaces/admin/adminItem';
 
 interface ItemListProps {
@@ -22,6 +23,9 @@ const AdminItemList: React.FC<ItemListProps> = ({ items }) => {
 
     return (
         <div className="flex flex-col items-center w-full p-4">
+            <div className="flex justify-end w-full mb-4">
+                <RedeployButton />
+            </div>
             <AdminItemEdit open={openModal} item={item} onClose={() => { setOpenModal(false)}}/>
             {items.map((item) => (
                 <div

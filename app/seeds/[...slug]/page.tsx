@@ -8,6 +8,6 @@ export default async function Page({params}: {params: Promise<{ slug: string }>}
     const item = productList?.find((item) => item.id === id)
 
     if(item){
-        return <ProductDetailView item={item} type="seed" pageColor="skyBlue"/>
+        return <ProductDetailView item={item} type="seed" pageColor="skyblue"/>
     }
 }

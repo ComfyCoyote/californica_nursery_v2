@@ -22,11 +22,11 @@ const ProductDetailPrices: React.FC<ProductDetailInfoPropTypes> = ({ prices, pri
                     style={{ backgroundColor: palette[pageColor] }} 
                     onClick={(e) => selectPrice(e, option)}
                     className={`
-                        p-7
+                        px-8 py-3
                         rounded-none
                         border-0
                         ${priceVariation?.id === option.id ? 'border-2 border-black' : ''}
-                        w-full max-w-[200px]
+                        w-full max-w-[360px]
                         disabled:opacity-50 disabled:cursor-not-allowed
                     `}
                 >

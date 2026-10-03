@@ -62,7 +62,7 @@ const ContactUs: React.FC = () => {
     };
 
     return (
-        <div className="flex flex-col md:flex-row gap-8 p-8 mt-25">
+        <div className="flex items-center justify-centerflex-col md:flex-row gap-8 p-8 mt-25">
             <Navbar/>
             <LeftSection />
             <div className="w-full md:w-1/2">

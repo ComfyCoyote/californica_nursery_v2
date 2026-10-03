@@ -1,8 +1,7 @@
-
-import AboutPageTopSection from "./about-top";
 import AboutPageIanSection from "./about-ian";
 import AboutPageJacksonSection from "./about-jackson";
 import Navbar from "../layout/navbar";
+import AboutPageTopSection from "./about-top";
 
 const BannerChild = () => {
     return (

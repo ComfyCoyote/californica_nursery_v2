@@ -115,6 +115,7 @@
 	color: black;
 	border-radius: 0;       /* rounded-none */
 	border: 2px solid black;
+	cursor: pointer;
 }
 
 .addToCartButton:disabled {

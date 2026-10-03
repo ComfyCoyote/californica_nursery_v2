@@ -59,7 +59,7 @@ const LandscapingSectionTwo = () => {
                         </p>
                     </div>
                 </div>
-                <div className="md:h-[70vh] relative md:w-[50vw]">
+                <div className="h-[650px] relative w-[800px]">
                     <Image
                         src={'/images/landscaping/ian_jackson.webp'}
                         alt="Background Image"
