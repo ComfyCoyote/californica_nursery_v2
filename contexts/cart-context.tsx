@@ -54,16 +54,15 @@ export const CartProvider: React.FC <CartProviderProps>= (props) => {
   }, [])
 
   useEffect(() => {
-
-
-    if(orderItems.length > 0){
-      console.log('order items', orderItems)
+    if (orderItems.length > 0) {
       const localItems = JSON.stringify(orderItems)
       sessionStorage.setItem("orderItems", localItems)
-      sessionStorage.setItem("calculated", JSON.stringify(calculated))
-      calculateOrder().then((amount) => {setCalculated(amount.amount)})
+      calculateOrder().then((amount) => { setCalculated(amount.amount) })
+    } else {
+      setCalculated(undefined)
+      sessionStorage.removeItem("orderItems")
+      sessionStorage.removeItem("calculated")
     }
-
   }, [orderItems])
 
   const toggleCart = () => {

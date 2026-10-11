@@ -21,12 +21,12 @@ const Checkout: React.FC = () => {
   const [error, setError] = useState<Error>({status: false, title: '', desc: ''})
 
   return (
-    <div className="container mx-auto p-4 w-full">
+    <div className="container mx-auto p-4 w-full min-h-screen text-white">
       <h1 className="text-2xl font-bold mb-4">Review Items</h1>
       {error.status && (
         <ErrorAlert title={error.title} description={error.desc} onClose={() => setError({ status: false, title: '', desc: '' })} />
       )}
-      <div className="flex flex-row gap-4 w-full">
+      <div className="flex flex-col md:flex-row gap-4 w-full">
         <div className="flex-1">
           {orderItems.map((item) => (
             <CheckoutItem key={item.catalogObjectId} item={item} />
@@ -34,7 +34,7 @@ const Checkout: React.FC = () => {
         </div>
         <form className="flex-1 p-4 space-y-4" onSubmit={getPaymentLink}>
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+            <label htmlFor="name" className="block text-sm font-medium text-white">Name</label>
             <input
               id="name"
               type="text"
@@ -45,7 +45,7 @@ const Checkout: React.FC = () => {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label htmlFor="email" className="block text-sm font-medium text-white">Email</label>
             <input
               id="email"
               type="email"
@@ -56,7 +56,7 @@ const Checkout: React.FC = () => {
           </div>
 
           <div className="space-y-2">
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
+            <label htmlFor="phone" className="block text-sm font-medium text-white">Phone Number</label>
             <input
               id="phone"
               type="tel"
@@ -69,13 +69,15 @@ const Checkout: React.FC = () => {
           <button
             type="button"
             onClick={getPaymentLink}
-            className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mt-4"
+            disabled={orderItems.length === 0 || !name || !email || !phone}
+            style={{ backgroundColor: (orderItems.length === 0 || !name || !email || !phone) ? '#9ca3af' : '#c0d84d' }}
+            className="w-full px-4 py-2 text-black rounded-md hover:opacity-80 focus:outline-none mt-4 font-semibold disabled:cursor-not-allowed disabled:opacity-60"
           >
             Proceed to checkout
           </button>
         </form>
       </div>
-      <p className="mt-4">Total Price: ${calculated ? calculated : 'Unable to calculate'}</p>
+      <p className="mt-4">Total Price: ${calculated ?? '0'}</p>
     </div>
   )
 

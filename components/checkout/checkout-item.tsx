@@ -27,9 +27,9 @@ const CheckoutItem: React.FC<ItemProps> = ({ item }) => {
         />
       </div>
       <div className="flex-1 flex flex-col">
-        <p className="text-lg font-bold mb-1">{item.name}</p>
-        <p className="text-gray-700 mb-1">Price: ${item.misc.price}</p>
-        <p className="text-gray-700 mb-2">Quantity: 
+        <p className="text-lg font-bold mb-1 text-white">{item.name}</p>
+        <p className="text-white mb-1">Price: ${item.misc.price}</p>
+        <p className="text-white mb-2">Quantity: 
           <input 
             type="number"  
             value={quantity}

@@ -63,30 +63,32 @@ const LandingPage: React.FC = () => {
                     </div>
                 ))}
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 h-[200px] bg-darkGreen flex items-center justify-between px-5">
-                <div className="p-5">
+                <div className="relative z-10 bg-darkGreen flex items-center justify-between px-4 py-3 md:px-5 md:h-[200px]">
+                    <div className="flex-shrink-0 p-2 md:p-5">
                         <Image
                             src="/images/landing/main-logo.png"
                             alt="Logo"
                             width={180}
                             height={180}
+                            className="w-[60px] h-[60px] md:w-[180px] md:h-[180px]"
                         />
                     </div>
-                    <div className="p-5 bg-blue w-[700px] h-[250px] mr-22">
+                    <div className="flex-1 flex justify-center px-2 md:px-5 min-w-0">
                         <Image
                             src="/images/landing/landing-page-logo-white.png"
                             alt="Logo"
                             width={700}
                             height={300}
+                            className="w-full max-w-[700px] h-auto"
                         />
                     </div>
-                    <div className="">
+                    <div className="flex-shrink-0">
                         <Image
                             src="/images/icons/basket_lime.png"
                             alt="Shopping Cart"
                             width={100}
                             height={100}
-                            className="w-[100px] h-[100px] cursor-pointer"
+                            className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] cursor-pointer"
                             onClick={toggleCart}
                         />
                     </div>

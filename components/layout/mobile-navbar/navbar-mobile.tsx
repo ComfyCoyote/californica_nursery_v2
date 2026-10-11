@@ -23,24 +23,24 @@ const Navbar: React.FC = () => {
   const {open, toggleOpen} = useSearch()
 
   return (
-    <div className="fixed top-0 left-0 w-[100vw] z-50 bg-darkGreen px-1 py-2 flex items-center justify-between flex-col">
+    <div className="fixed top-0 left-0 w-[100vw] z-50 bg-darkGreen px-1 py-2 flex items-center justify-between flex-col overflow-x-hidden">
       <div className="p-5 text-center">
         <Link href="/">
           <Image
-            height={50}
-            width={200} 
-            src={'/images/titles/nav_bar.png'}
+            height={47}
+            width={200}
+            src={'/images/landing/shop-page-lettering.png'}
             alt={'Californica Nursery Logo'}
-            className="w-[200px] h-[50px]"
+            className="w-[200px] h-[47px]"
           />
         </Link>
-      </div>      
-      <div className="flex flex-row w-full items-center  justify-between px-4 gap-8">
+      </div>
+      <div className="flex flex-row w-full items-center justify-between px-4 gap-8">
         <ShoppingCart />
         <SearchSidebar type={pathname}/>
         <div className="text-center">
           <button
-            className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] rounded-full bg-darkBrown text-white hover:bg-transparent" 
+            className="h-[50px] md:h-[70px] w-[50px] md:w-[70px] rounded-full bg-darkBrown text-white hover:bg-transparent"
             onClick={toggleCart}
           >
             <Image
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
             </button>
           </div>
         }
-        
+
       </div>
     </div>
   );

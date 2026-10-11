@@ -25,15 +25,14 @@ const ShoppingCart: React.FC = () => {
           <p className="text-cream">No items in the cart</p>
         ) : (
           orderItems.map((item) => (
-            <div key={item.id} className="flex md:w-[300px] w-[360px] justify-between items-center mb-4">
-              <div>
-                <p className="text-cream">{item.name}</p>
-              </div>
-              <button 
+            <div key={item.id} className="group flex md:w-[300px] w-[360px] justify-between items-center mb-4">
+              <p className="text-cream">{item.name}</p>
+              <button
                 onClick={(e) => removeFromCart(e, item.catalogObjectId)}
-                className="px-4 py-2 border-darkBrown text-darkBrown rounded hover:text-cream hover:border-cream text-sm"
+                className="ml-3 mr-2 flex-shrink-0 text-cream/60 hover:text-cream text-lg leading-none cursor-pointer md:opacity-0 md:group-hover:opacity-100 md:transition-opacity"
+                aria-label="Remove item"
               >
-                Remove
+                ✕
               </button>
             </div>
           ))
