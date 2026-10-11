@@ -14,10 +14,6 @@ export default async function createPaymentLink(order: Square.Order){
             applePay: true,
             googlePay: true,
             cashAppPay: true
-          },
-          appFeeMoney: {
-            amount: 0,
-            currency: 'USD'
           }
         }
       }
