@@ -39,7 +39,7 @@ const LandscapingSectionTwo = () => {
                     <BulletPoint key={txt} text={txt} />
                 ))}
             </div>
-            <div className="w-full flex flex-row md:flex-row p-10 bg-olive">
+            <div className="w-full flex flex-col md:flex-row p-10 bg-olive gap-10">
                 <div className="px-5 md:px-10 flex flex-col gap-5">
                     <div className="flex-1 py-5 md:py-10">
                         <p className="text-2xl text-cream text-center md:text-left">
@@ -59,12 +59,13 @@ const LandscapingSectionTwo = () => {
                         </p>
                     </div>
                 </div>
-                <div className="h-[650px] relative w-[800px]">
+                <div className="w-full md:w-[800px] md:flex-shrink-0">
                     <Image
                         src={'/images/landscaping/ian_jackson.webp'}
                         alt="Background Image"
-                        fill={true}
-                        style={{objectFit: "cover"}} // Ensure it's below the overlay
+                        width={600}
+                        height={650}
+                        className="w-full h-auto"
                     />
                 </div>
             </div>
