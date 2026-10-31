@@ -150,7 +150,7 @@ export default function RevenueDashboard({
                                 cx="50%"
                                 cy="50%"
                                 outerRadius={80}
-                                label={({ category, percent }) => `${category} ${(percent * 100).toFixed(0)}%`}
+                                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
                                 labelLine={false}
                             >
                                 {categoryBreakdown.map((entry) => (
@@ -158,7 +158,7 @@ export default function RevenueDashboard({
                                 ))}
                             </Pie>
                             <Legend />
-                            <Tooltip formatter={(v: number) => fmt(v)} />
+                            <Tooltip formatter={(v) => fmt(v as number)} />
                         </PieChart>
                     </ResponsiveContainer>
                 </div>
