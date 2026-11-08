@@ -13,13 +13,12 @@ interface LayoutPropTypes {
 const Layout: React.FC<LayoutPropTypes> = ({children}) => {
 
     return(
-        <React.Fragment>
-            <div className="bg-[#605925] w-full">
+        <div className="min-h-screen flex flex-col bg-[#605925]">
+            <div className="flex-1">
                 {children}
             </div>
             <Footer />
-        </React.Fragment>
-
+        </div>
     )
 
 
